@@ -1,0 +1,80 @@
+{
+  "model_name": "triv_5_uniform_Matthews_Nsum_ALL_p1000",
+  "model_num": "97ec08e5-20c9-4591-9ae9-eb66b259facb",
+  "model_type": "SimpleFCClassificationModel",
+  "model": {
+    "nonlin_str": "ReLU_inplace",
+    "hidden_lin_ftrs": 128,
+    "hidden_lin_ftrs_no": 4,
+    "dropout": 0.3098272128030415
+  },
+  "dataloader": {
+    "data_files": [
+      "od_Matije/curves_svi",
+      "od_Matije/curves_r01triv"
+    ],
+    "dataset": "NSumDataset",
+    "load_reduced_metadata": false,
+    "max_prime": 1000,
+    "skip_first_primes": 0,
+    "valid_size": 0.2,
+    "test_size": 0.2,
+    "min_max_conductor": [
+      1,
+      100000000000000000000000000000
+    ],
+    "test_curves_count": null,
+    "purge_repetitive_curves": true,
+    "sort": "conductor",
+    "min_max_rank": null,
+    "only_prime_conductors": false,
+    "only_not_prime_conductors": false,
+    "class_identifier": "rank",
+    "min_class_size": 50,
+    "batch_size": 2048,
+    "test_batch_size": 2048,
+    "test_RAND_SEED": 42,
+    "valid_RAND_SEED": 42,
+    "shuffle_RAND_SEED": 42,
+    "load_S4_S5_sums": "od_Matije/curves_r01triv_svi_union_Nsums_S4_S5_p1000.json",
+    "load_Bober_sums": "Bober_sums/triv_union_1000.txt",
+    "normalize_aps": true,
+    "use_p": false,
+    "use_sqrt_p": false,
+    "use_log_p": false,
+    "use_conductors": true,
+    "N_masks": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "load_save_cache": true,
+    "max_log10conductors": 28.999974824076425
+  },
+  "opt_func_str": "Adam",
+  "loss_func_str": "CrossEntropyLoss_weighted",
+  "epochs": 10,
+  "optimizer": {
+    "lr_max": 0.0014986913520446388,
+    "wd": 0.23615074816421988
+  },
+  "iter_num": 66,
+  "loss_func_weights": [
+    26.431005636502444,
+    17.005152215034435,
+    11.40298674814467,
+    4.722586786861742,
+    3.790653195390196,
+    5.121821627100291,
+    10.043341665895133,
+    27.884975922403303,
+    120.03334316907642,
+    966.8282828282828,
+    14792.472727272727
+  ],
+  "fp16_training": true
+}

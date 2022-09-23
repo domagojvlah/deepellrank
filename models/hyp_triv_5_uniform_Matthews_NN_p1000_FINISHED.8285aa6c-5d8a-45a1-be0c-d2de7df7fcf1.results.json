@@ -1,0 +1,14 @@
+{
+  "time_for_loading_dataset": "[6.38987713586539, 6.4019579279993195]",
+  "time_for_model_generation": "[0.016549149993807077, 0.01655043500068132]",
+  "model_number_of_parameters": 733963,
+  "model_latent_size": 64,
+  "time_for_model_training": "[1418.525390024297, 1280.2608857899995]",
+  "tl_last": 0.5682728290557861,
+  "vl_last": 0.6567209959030151,
+  "vl_tl_ratio": 1.155643842754527,
+  "vl_min": 0.5869129300117493,
+  "test_loss": 0.5763302445411682,
+  "Matthews_corrcoef": 0.6129948225236682,
+  "model_not_trained": false
+}

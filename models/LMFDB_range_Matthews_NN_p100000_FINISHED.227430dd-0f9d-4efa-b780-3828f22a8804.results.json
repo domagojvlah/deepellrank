@@ -1,0 +1,15 @@
+{
+  "time_for_loading_dataset": "[292.61741939373314, 287.61372345799464]",
+  "time_for_model_generation": "[0.03979918081313372, 0.03881518999696709]",
+  "model_number_of_parameters": 805765,
+  "model_latent_size": 64,
+  "time_for_lr_finder": "[63.315689786337316, 62.4647729290009]",
+  "time_for_model_training": "[51441.82949253125, 51066.363929193]",
+  "tl_last": 0.0007986110867932439,
+  "vl_last": 0.0005747815012000501,
+  "vl_tl_ratio": 0.7197264234184843,
+  "vl_min": 0.0005717785679735243,
+  "test_loss": 0.006499168463051319,
+  "Matthews_corrcoef": 0.9846973591329686,
+  "model_not_trained": false
+}

@@ -1,0 +1,85 @@
+{
+  "model_name": "triv_5_range_Matthews_Nsum_ALL_p10000",
+  "model_num": "fa133e76-aee5-4321-be39-f85db154b4d0",
+  "model_type": "SimpleFCClassificationModel",
+  "model": {
+    "nonlin_str": "ReLU_inplace",
+    "hidden_lin_ftrs": 128,
+    "hidden_lin_ftrs_no": 4,
+    "dropout": 0.6178808608310961
+  },
+  "dataloader": {
+    "data_files": [
+      "od_Matije/curves_svi",
+      "od_Matije/curves_r01triv"
+    ],
+    "dataset": "NSumDataset",
+    "load_reduced_metadata": false,
+    "max_prime": 10000,
+    "skip_first_primes": 0,
+    "valid_size": 0.2,
+    "test_size": null,
+    "min_max_conductor": [
+      1,
+      100000000000000000000000000000
+    ],
+    "min_max_test_conductor": [
+      100000000000000000000000000001,
+      1000000000000000000000000000000
+    ],
+    "curves_count": null,
+    "test_curves_count": null,
+    "purge_repetitive_curves": true,
+    "sort": "conductor",
+    "min_max_rank": null,
+    "only_prime_conductors": false,
+    "only_not_prime_conductors": false,
+    "class_identifier": "rank",
+    "min_class_size": 50,
+    "batch_size": 2048,
+    "test_batch_size": 2048,
+    "test_RAND_SEED": 42,
+    "valid_RAND_SEED": 42,
+    "shuffle_RAND_SEED": 42,
+    "load_S4_S5_sums": "od_Matije/curves_r01triv_svi_union_Nsums_S4_S5_p10000.json",
+    "load_Bober_sums": "Bober_sums/triv_union_10000.txt",
+    "normalize_aps": true,
+    "use_p": false,
+    "use_sqrt_p": false,
+    "use_log_p": false,
+    "use_conductors": true,
+    "N_masks": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "load_save_cache": true,
+    "max_log10conductors": 29.999875633530895
+  },
+  "opt_func_str": "Adam",
+  "loss_func_str": "CrossEntropyLoss_weighted",
+  "epochs": 10,
+  "optimizer": {
+    "lr_max": 0.0002512050744735244,
+    "wd": 1.0
+  },
+  "iter_num": 192,
+  "loss_func_weights": [
+    26.406556312885428,
+    17.024189160912325,
+    11.423689117541338,
+    4.717808060307336,
+    3.7887379038642437,
+    5.126578768944597,
+    10.035895968302997,
+    27.95175010650432,
+    119.82120765832106,
+    950.007006071929,
+    14323.697183098591
+  ],
+  "fp16_training": true
+}

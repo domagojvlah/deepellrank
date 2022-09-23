@@ -1,0 +1,476 @@
+### LMFDB NN
+
+./train_model_controller.py --no-lr_finder_usage --cuda_device_no 0 --num_iter 10 hyp_LMFDB_uniform_Matthews_NN_p1000_FINISHED
+
+./train_model_controller.py --no-lr_finder_usage --cuda_device_no 1 --num_iter 10 hyp_LMFDB_uniform_Matthews_NN_p10000_FINISHED
+
+./train_model_controller.py --no-lr_finder_usage --cuda_device_no 2 --num_iter 10 hyp_LMFDB_range_Matthews_NN_p1000_FINISHED
+
+./train_model_controller.py --no-lr_finder_usage --cuda_device_no 3 --num_iter 10 hyp_LMFDB_range_Matthews_NN_p10000_FINISHED
+
+./train_model_controller.py --no-lr_finder_usage --cuda_device_no 4 --num_iter 10 hyp_LMFDB_uniform_Matthews_NN_p100000_FINISHED
+
+./train_model_controller.py    --lr_finder_usage --cuda_device_no 5 --num_iter 10 hyp_LMFDB_range_Matthews_NN_p100000_FINISHED
+
+
+
+### custom NN
+
+./train_model_controller.py --no-lr_finder_usage --cuda_device_no 1 --num_iter 10 --model_name  hyp_triv_5_uniform_Matthews_NN_p1000_FINISHED --min_max_conductor "[1,10**29]"  hyp_triv_1_uniform_Matthews_NN_p1000_FINISHED
+
+./train_model_controller.py --no-lr_finder_usage --cuda_device_no 3 --num_iter 10 --model_name  hyp_triv_5_range_Matthews_NN_p1000_FINISHED --min_max_conductor "[1,10**29]" --min_max_test_conductor "[10**29+1,10**30]"  hyp_triv_1_range_Matthews_NN_p1000_FINISHED
+
+./train_model_controller.py --no-lr_finder_usage --cuda_device_no 1 --num_iter 10 --model_name  hyp_triv_5_uniform_Matthews_NN_p10000_FINISHED --min_max_conductor "[1,10**29]"  hyp_triv_1_uniform_Matthews_NN_p10000_FINISHED
+
+./train_model_controller.py --no-lr_finder_usage --cuda_device_no 3 --num_iter 10 --model_name  hyp_triv_5_range_Matthews_NN_p10000_FINISHED --min_max_conductor "[1,10**29]" --min_max_test_conductor "[10**29+1,10**30]"  hyp_triv_1_range_Matthews_NN_p10000_FINISHED
+
+./train_model_controller.py --no-lr_finder_usage --cuda_device_no 0 --num_iter 10 --model_name  hyp_triv_5_uniform_Matthews_NN_p100000_FINISHED --min_max_conductor "[1,10**29]"  hyp_triv_1_uniform_Matthews_NN_p100000_FINISHED
+
+./train_model_controller.py --no-lr_finder_usage --cuda_device_no 2 --num_iter 10 --model_name  hyp_triv_5_range_Matthews_NN_p100000_FINISHED --min_max_conductor "[1,10**29]" --min_max_test_conductor "[10**29+1,10**30]"  hyp_triv_1_range_Matthews_NN_p100000_FINISHED
+
+
+#########################################################
+
+
+
+### LMFDB NSums
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 hyp_LMFDB_uniform_Matthews_Nsum_0 50 450
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 hyp_LMFDB_range_Matthews_Nsum_0 50 450
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 --max_prime 10000 --model_name LMFDB_uniform_Matthews_Nsum_0_p10000 hyp_LMFDB_uniform_Matthews_Nsum_0 50 450
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 --max_prime 10000 --model_name LMFDB_range_Matthews_Nsum_0_p10000 hyp_LMFDB_range_Matthews_Nsum_0 50 450
+
+
+./train_model_controller.py --no-lr_finder_usage --cuda_device_no 0 --num_iter 10 hyp_LMFDB_uniform_Matthews_Nsum_0_p1000_FINISHED
+
+./train_model_controller.py --no-lr_finder_usage --cuda_device_no 1 --num_iter 10 hyp_LMFDB_uniform_Matthews_Nsum_0_p10000_FINISHED
+
+./train_model_controller.py --no-lr_finder_usage --cuda_device_no 2 --num_iter 10 hyp_LMFDB_range_Matthews_Nsum_0_p1000_FINISHED
+
+./train_model_controller.py --no-lr_finder_usage --cuda_device_no 3 --num_iter 10 hyp_LMFDB_range_Matthews_Nsum_0_p10000_FINISHED
+
+./train_model_controller.py --no-lr_finder_usage --cuda_device_no 4 --num_iter 10 hyp_LMFDB_uniform_Matthews_Nsum_0_p100000_FINISHED
+
+./train_model_controller.py    --lr_finder_usage --cuda_device_no 5 --num_iter 10 hyp_LMFDB_range_Matthews_Nsum_0_p100000_FINISHED
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 --max_prime 10000 --N_masks [0,1,0,0] --model_name LMFDB_uniform_Matthews_Nsum_1_p10000-ver2 hyp_LMFDB_uniform_Matthews_Nsum_0-ver2 50 450
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 --max_prime 10000 --N_masks [0,0,1,0] --model_name LMFDB_uniform_Matthews_Nsum_2_p10000-ver2 hyp_LMFDB_uniform_Matthews_Nsum_0-ver2 50 450
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 --max_prime 10000 --N_masks [0,0,0,1] --model_name LMFDB_uniform_Matthews_Nsum_3_p10000-ver2 hyp_LMFDB_uniform_Matthews_Nsum_0-ver2 50 450
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 --max_prime 10000 --N_masks [0,1,0,0] --model_name LMFDB_range_Matthews_Nsum_1_p10000-ver2 hyp_LMFDB_range_Matthews_Nsum_0-ver2 50 450
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 --max_prime 10000 --N_masks [0,0,1,0] --model_name LMFDB_range_Matthews_Nsum_2_p10000-ver2 hyp_LMFDB_range_Matthews_Nsum_0-ver2 50 450
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 --max_prime 10000 --N_masks [0,0,0,1] --model_name LMFDB_range_Matthews_Nsum_3_p10000-ver2 hyp_LMFDB_range_Matthews_Nsum_0-ver2 50 450
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 --N_masks [0,1,0,0] --model_name LMFDB_uniform_Matthews_Nsum_1_p1000-ver2 hyp_LMFDB_uniform_Matthews_Nsum_0-ver2 50 450
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 --N_masks [0,0,1,0] --model_name LMFDB_uniform_Matthews_Nsum_2_p1000-ver2 hyp_LMFDB_uniform_Matthews_Nsum_0-ver2 50 450
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 --N_masks [0,0,0,1] --model_name LMFDB_uniform_Matthews_Nsum_3_p1000-ver2 hyp_LMFDB_uniform_Matthews_Nsum_0-ver2 50 450
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 --N_masks [0,1,0,0] --model_name LMFDB_range_Matthews_Nsum_1_p1000-ver2 hyp_LMFDB_range_Matthews_Nsum_0-ver2 50 450
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 --N_masks [0,0,1,0] --model_name LMFDB_range_Matthews_Nsum_2_p1000-ver2 hyp_LMFDB_range_Matthews_Nsum_0-ver2 50 450
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 --N_masks [0,0,0,1] --model_name LMFDB_range_Matthews_Nsum_3_p1000-ver2 hyp_LMFDB_range_Matthews_Nsum_0-ver2 50 450
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 --max_prime 100000 --N_masks [0,1,0,0] --model_name LMFDB_uniform_Matthews_Nsum_1_p100000-ver2 hyp_LMFDB_uniform_Matthews_Nsum_0-ver2 50 450
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 --max_prime 100000 --N_masks [0,0,1,0] --model_name LMFDB_uniform_Matthews_Nsum_2_p100000-ver2 hyp_LMFDB_uniform_Matthews_Nsum_0-ver2 50 450
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 --max_prime 100000 --N_masks [0,0,0,1] --model_name LMFDB_uniform_Matthews_Nsum_3_p100000-ver2 hyp_LMFDB_uniform_Matthews_Nsum_0-ver2 50 450
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 --max_prime 100000 --N_masks [0,1,0,0] --model_name LMFDB_range_Matthews_Nsum_1_p100000-ver2 hyp_LMFDB_range_Matthews_Nsum_0-ver2 50 450
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 --max_prime 100000 --N_masks [0,0,1,0] --model_name LMFDB_range_Matthews_Nsum_2_p100000-ver2 hyp_LMFDB_range_Matthews_Nsum_0-ver2 50 450
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 --max_prime 100000 --N_masks [0,0,0,1] --model_name LMFDB_range_Matthews_Nsum_3_p100000-ver2 hyp_LMFDB_range_Matthews_Nsum_0-ver2 50 450
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 hyp_LMFDB_uniform_Matthews_Nsum_B_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 hyp_LMFDB_uniform_Matthews_Nsum_B_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 hyp_LMFDB_uniform_Matthews_Nsum_B_p100000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 hyp_LMFDB_range_Matthews_Nsum_B_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 hyp_LMFDB_range_Matthews_Nsum_B_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 hyp_LMFDB_range_Matthews_Nsum_B_p100000 20 180
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 hyp_LMFDB_uniform_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 hyp_LMFDB_uniform_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 hyp_LMFDB_uniform_Matthews_Nsum_4_p100000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 hyp_LMFDB_range_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 hyp_LMFDB_range_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 hyp_LMFDB_range_Matthews_Nsum_4_p100000 20 180
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 --N_masks [0,0,0,0,0,1,0] --model_name LMFDB_uniform_Matthews_Nsum_5_p1000   hyp_LMFDB_uniform_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 --N_masks [0,0,0,0,0,1,0] --model_name LMFDB_uniform_Matthews_Nsum_5_p10000  hyp_LMFDB_uniform_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 --N_masks [0,0,0,0,0,1,0] --model_name LMFDB_uniform_Matthews_Nsum_5_p100000 hyp_LMFDB_uniform_Matthews_Nsum_4_p100000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 --N_masks [0,0,0,0,0,1,0] --model_name LMFDB_range_Matthews_Nsum_5_p1000   hyp_LMFDB_range_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 --N_masks [0,0,0,0,0,1,0] --model_name LMFDB_range_Matthews_Nsum_5_p10000  hyp_LMFDB_range_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 --N_masks [0,0,0,0,0,1,0] --model_name LMFDB_range_Matthews_Nsum_5_p100000 hyp_LMFDB_range_Matthews_Nsum_4_p100000 20 180
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 --N_masks [1,1,1,1,1,1,1] --model_name LMFDB_uniform_Matthews_Nsum_ALL_p1000   hyp_LMFDB_uniform_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 --N_masks [1,1,1,1,1,1,1] --model_name LMFDB_uniform_Matthews_Nsum_ALL_p10000  hyp_LMFDB_uniform_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 --N_masks [1,1,1,1,1,1,1] --model_name LMFDB_uniform_Matthews_Nsum_ALL_p100000 hyp_LMFDB_uniform_Matthews_Nsum_4_p100000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 --N_masks [1,1,1,1,1,1,1] --model_name LMFDB_range_Matthews_Nsum_ALL_p1000   hyp_LMFDB_range_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 --N_masks [1,1,1,1,1,1,1] --model_name LMFDB_range_Matthews_Nsum_ALL_p10000  hyp_LMFDB_range_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 --N_masks [1,1,1,1,1,1,1] --model_name LMFDB_range_Matthews_Nsum_ALL_p100000 hyp_LMFDB_range_Matthews_Nsum_4_p100000 20 180
+
+
+
+
+### custom Nsums
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0                    --model_name triv_5_uniform_Matthews_Nsum_0_p1000   hyp_triv_5_uniform_Matthews_Nsum_0 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 --max_prime 10000  --model_name triv_5_uniform_Matthews_Nsum_0_p10000  hyp_triv_5_uniform_Matthews_Nsum_0 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 --max_prime 100000 --model_name triv_5_uniform_Matthews_Nsum_0_p100000 hyp_triv_5_uniform_Matthews_Nsum_0 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3                    --model_name triv_5_range_Matthews_Nsum_0_p1000     hyp_triv_5_range_Matthews_Nsum_0 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 --max_prime 10000  --model_name triv_5_range_Matthews_Nsum_0_p10000    hyp_triv_5_range_Matthews_Nsum_0 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 --max_prime 100000 --model_name triv_5_range_Matthews_Nsum_0_p100000   hyp_triv_5_range_Matthews_Nsum_0 20 180
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 --max_prime 10000 --N_masks [0,1,0,0] --model_name triv_5_uniform_Matthews_Nsum_1_p10000  hyp_triv_5_uniform_Matthews_Nsum_0 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 --max_prime 10000 --N_masks [0,0,1,0] --model_name triv_5_uniform_Matthews_Nsum_2_p10000  hyp_triv_5_uniform_Matthews_Nsum_0 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 --max_prime 10000 --N_masks [0,0,0,1] --model_name triv_5_uniform_Matthews_Nsum_3_p10000  hyp_triv_5_uniform_Matthews_Nsum_0 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 --max_prime 10000 --N_masks [0,1,0,0] --model_name triv_5_range_Matthews_Nsum_1_p10000    hyp_triv_5_range_Matthews_Nsum_0 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 --max_prime 10000 --N_masks [0,0,1,0] --model_name triv_5_range_Matthews_Nsum_2_p10000    hyp_triv_5_range_Matthews_Nsum_0 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 --max_prime 10000 --N_masks [0,0,0,1] --model_name triv_5_range_Matthews_Nsum_3_p10000    hyp_triv_5_range_Matthews_Nsum_0 20 180
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 --N_masks [0,1,0,0] --model_name triv_5_uniform_Matthews_Nsum_1_p1000  hyp_triv_5_uniform_Matthews_Nsum_0 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 --N_masks [0,0,1,0] --model_name triv_5_uniform_Matthews_Nsum_2_p1000  hyp_triv_5_uniform_Matthews_Nsum_0 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 --N_masks [0,0,0,1] --model_name triv_5_uniform_Matthews_Nsum_3_p1000  hyp_triv_5_uniform_Matthews_Nsum_0 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 --N_masks [0,1,0,0] --model_name triv_5_range_Matthews_Nsum_1_p1000    hyp_triv_5_range_Matthews_Nsum_0 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 --N_masks [0,0,1,0] --model_name triv_5_range_Matthews_Nsum_2_p1000    hyp_triv_5_range_Matthews_Nsum_0 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 --N_masks [0,0,0,1] --model_name triv_5_range_Matthews_Nsum_3_p1000    hyp_triv_5_range_Matthews_Nsum_0 20 180
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 --max_prime 100000 --N_masks [0,1,0,0] --model_name triv_5_uniform_Matthews_Nsum_1_p100000  hyp_triv_5_uniform_Matthews_Nsum_0 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 --max_prime 100000 --N_masks [0,0,1,0] --model_name triv_5_uniform_Matthews_Nsum_2_p100000  hyp_triv_5_uniform_Matthews_Nsum_0 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 --max_prime 100000 --N_masks [0,0,0,1] --model_name triv_5_uniform_Matthews_Nsum_3_p100000  hyp_triv_5_uniform_Matthews_Nsum_0 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 --max_prime 100000 --N_masks [0,1,0,0] --model_name triv_5_range_Matthews_Nsum_1_p100000    hyp_triv_5_range_Matthews_Nsum_0 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 --max_prime 100000 --N_masks [0,0,1,0] --model_name triv_5_range_Matthews_Nsum_2_p100000    hyp_triv_5_range_Matthews_Nsum_0 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 --max_prime 100000 --N_masks [0,0,0,1] --model_name triv_5_range_Matthews_Nsum_3_p100000    hyp_triv_5_range_Matthews_Nsum_0 20 180
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 hyp_triv_5_uniform_Matthews_Nsum_B_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 hyp_triv_5_uniform_Matthews_Nsum_B_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 hyp_triv_5_uniform_Matthews_Nsum_B_p100000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 hyp_triv_5_range_Matthews_Nsum_B_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 hyp_triv_5_range_Matthews_Nsum_B_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 hyp_triv_5_range_Matthews_Nsum_B_p100000 20 180
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 hyp_triv_5_uniform_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 hyp_triv_5_uniform_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 hyp_triv_5_uniform_Matthews_Nsum_4_p100000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 hyp_triv_5_range_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 hyp_triv_5_range_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 hyp_triv_5_range_Matthews_Nsum_4_p100000 20 180
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 --N_masks [0,0,0,0,0,1,0] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_5_p1000   hyp_triv_5_uniform_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 --N_masks [0,0,0,0,0,1,0] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_5_p10000  hyp_triv_5_uniform_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 --N_masks [0,0,0,0,0,1,0] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_5_p100000 hyp_triv_5_uniform_Matthews_Nsum_4_p100000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 --N_masks [0,0,0,0,0,1,0] --no-use_cache_file_name_prefix --model_name triv_5_range_Matthews_Nsum_5_p1000     hyp_triv_5_range_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 --N_masks [0,0,0,0,0,1,0] --no-use_cache_file_name_prefix --model_name triv_5_range_Matthews_Nsum_5_p10000    hyp_triv_5_range_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 --N_masks [0,0,0,0,0,1,0] --no-use_cache_file_name_prefix --model_name triv_5_range_Matthews_Nsum_5_p100000   hyp_triv_5_range_Matthews_Nsum_4_p100000 20 180
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 --N_masks [1,1,1,1,1,1,1] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_ALL_p1000   hyp_triv_5_uniform_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 --N_masks [1,1,1,1,1,1,1] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_ALL_p10000  hyp_triv_5_uniform_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 --N_masks [1,1,1,1,1,1,1] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_ALL_p100000 hyp_triv_5_uniform_Matthews_Nsum_4_p100000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 --N_masks [1,1,1,1,1,1,1] --no-use_cache_file_name_prefix --model_name triv_5_range_Matthews_Nsum_ALL_p1000     hyp_triv_5_range_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 --N_masks [1,1,1,1,1,1,1] --no-use_cache_file_name_prefix --model_name triv_5_range_Matthews_Nsum_ALL_p10000    hyp_triv_5_range_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 --N_masks [1,1,1,1,1,1,1] --no-use_cache_file_name_prefix --model_name triv_5_range_Matthews_Nsum_ALL_p100000   hyp_triv_5_range_Matthews_Nsum_4_p100000 20 180
+
+
+##################################################
+# Binary confusion matrix
+##################################################
+
+### custom Nsums
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 --N_masks [1,0,0,0,0,0,0] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_0_p1000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_uniform_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 --N_masks [1,0,0,0,0,0,0] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_0_p10000_B  --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_uniform_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 --N_masks [1,0,0,0,0,0,0] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_0_p100000_B --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_uniform_Matthews_Nsum_4_p100000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 --N_masks [1,0,0,0,0,0,0] --no-use_cache_file_name_prefix   --model_name triv_5_range_Matthews_Nsum_0_p1000_B     --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_range_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 --N_masks [1,0,0,0,0,0,0] --no-use_cache_file_name_prefix   --model_name triv_5_range_Matthews_Nsum_0_p10000_B    --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_range_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 --N_masks [1,0,0,0,0,0,0] --no-use_cache_file_name_prefix   --model_name triv_5_range_Matthews_Nsum_0_p100000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_range_Matthews_Nsum_4_p100000 20 180
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 --N_masks [0,1,0,0,0,0,0] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_1_p1000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_uniform_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 --N_masks [0,1,0,0,0,0,0] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_1_p10000_B  --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_uniform_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 --N_masks [0,1,0,0,0,0,0] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_1_p100000_B --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_uniform_Matthews_Nsum_4_p100000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 --N_masks [0,1,0,0,0,0,0] --no-use_cache_file_name_prefix   --model_name triv_5_range_Matthews_Nsum_1_p1000_B     --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_range_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 --N_masks [0,1,0,0,0,0,0] --no-use_cache_file_name_prefix   --model_name triv_5_range_Matthews_Nsum_1_p10000_B    --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_range_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 --N_masks [0,1,0,0,0,0,0] --no-use_cache_file_name_prefix   --model_name triv_5_range_Matthews_Nsum_1_p100000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_range_Matthews_Nsum_4_p100000 20 180
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 --N_masks [0,0,1,0,0,0,0] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_2_p1000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_uniform_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 --N_masks [0,0,1,0,0,0,0] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_2_p10000_B  --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_uniform_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 --N_masks [0,0,1,0,0,0,0] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_2_p100000_B --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_uniform_Matthews_Nsum_4_p100000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 --N_masks [0,0,1,0,0,0,0] --no-use_cache_file_name_prefix   --model_name triv_5_range_Matthews_Nsum_2_p1000_B     --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_range_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 --N_masks [0,0,1,0,0,0,0] --no-use_cache_file_name_prefix   --model_name triv_5_range_Matthews_Nsum_2_p10000_B    --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_range_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 --N_masks [0,0,1,0,0,0,0] --no-use_cache_file_name_prefix   --model_name triv_5_range_Matthews_Nsum_2_p100000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_range_Matthews_Nsum_4_p100000 20 180
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 --N_masks [0,0,0,1,0,0,0] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_3_p1000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_uniform_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 --N_masks [0,0,0,1,0,0,0] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_3_p10000_B  --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_uniform_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 --N_masks [0,0,0,1,0,0,0] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_3_p100000_B --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_uniform_Matthews_Nsum_4_p100000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 --N_masks [0,0,0,1,0,0,0] --no-use_cache_file_name_prefix   --model_name triv_5_range_Matthews_Nsum_3_p1000_B     --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_range_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 --N_masks [0,0,0,1,0,0,0] --no-use_cache_file_name_prefix   --model_name triv_5_range_Matthews_Nsum_3_p10000_B    --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_range_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 --N_masks [0,0,0,1,0,0,0] --no-use_cache_file_name_prefix   --model_name triv_5_range_Matthews_Nsum_3_p100000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_range_Matthews_Nsum_4_p100000 20 180
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 --N_masks [0,0,0,0,1,0,0] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_4_p1000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_uniform_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 --N_masks [0,0,0,0,1,0,0] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_4_p10000_B  --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_uniform_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 --N_masks [0,0,0,0,1,0,0] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_4_p100000_B --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_uniform_Matthews_Nsum_4_p100000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 --N_masks [0,0,0,0,1,0,0] --no-use_cache_file_name_prefix   --model_name triv_5_range_Matthews_Nsum_4_p1000_B     --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_range_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 --N_masks [0,0,0,0,1,0,0] --no-use_cache_file_name_prefix   --model_name triv_5_range_Matthews_Nsum_4_p10000_B    --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_range_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 --N_masks [0,0,0,0,1,0,0] --no-use_cache_file_name_prefix   --model_name triv_5_range_Matthews_Nsum_4_p100000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_range_Matthews_Nsum_4_p100000 20 180
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 --N_masks [0,0,0,0,0,1,0] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_5_p1000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_uniform_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 --N_masks [0,0,0,0,0,1,0] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_5_p10000_B  --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_uniform_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 --N_masks [0,0,0,0,0,1,0] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_5_p100000_B --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_uniform_Matthews_Nsum_4_p100000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 --N_masks [0,0,0,0,0,1,0] --no-use_cache_file_name_prefix   --model_name triv_5_range_Matthews_Nsum_5_p1000_B     --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_range_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 --N_masks [0,0,0,0,0,1,0] --no-use_cache_file_name_prefix   --model_name triv_5_range_Matthews_Nsum_5_p10000_B    --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_range_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 --N_masks [0,0,0,0,0,1,0] --no-use_cache_file_name_prefix   --model_name triv_5_range_Matthews_Nsum_5_p100000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_range_Matthews_Nsum_4_p100000 20 180
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 --N_masks [0,0,0,0,0,0,1] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_B_p1000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_uniform_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 --N_masks [0,0,0,0,0,0,1] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_B_p10000_B  --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_uniform_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 --N_masks [0,0,0,0,0,0,1] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_B_p100000_B --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_uniform_Matthews_Nsum_4_p100000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 --N_masks [0,0,0,0,0,0,1] --no-use_cache_file_name_prefix   --model_name triv_5_range_Matthews_Nsum_B_p1000_B     --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_range_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 --N_masks [0,0,0,0,0,0,1] --no-use_cache_file_name_prefix   --model_name triv_5_range_Matthews_Nsum_B_p10000_B    --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_range_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 --N_masks [0,0,0,0,0,0,1] --no-use_cache_file_name_prefix   --model_name triv_5_range_Matthews_Nsum_B_p100000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_range_Matthews_Nsum_4_p100000 20 180
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 --N_masks [1,1,1,1,1,1,1] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_ALL_p1000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_uniform_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 --N_masks [1,1,1,1,1,1,1] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_ALL_p10000_B  --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_uniform_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 --N_masks [1,1,1,1,1,1,1] --no-use_cache_file_name_prefix --model_name triv_5_uniform_Matthews_Nsum_ALL_p100000_B --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_uniform_Matthews_Nsum_4_p100000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 --N_masks [1,1,1,1,1,1,1] --no-use_cache_file_name_prefix   --model_name triv_5_range_Matthews_Nsum_ALL_p1000_B     --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_range_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 --N_masks [1,1,1,1,1,1,1] --no-use_cache_file_name_prefix   --model_name triv_5_range_Matthews_Nsum_ALL_p10000_B    --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_range_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 --N_masks [1,1,1,1,1,1,1] --no-use_cache_file_name_prefix   --model_name triv_5_range_Matthews_Nsum_ALL_p100000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_triv_5_range_Matthews_Nsum_4_p100000 20 180
+
+
+
+### LMFDB NSums
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 --N_masks [1,0,0,0,0,0,0] --no-use_cache_file_name_prefix --model_name LMFDB_uniform_Matthews_Nsum_0_p1000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_uniform_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 --N_masks [1,0,0,0,0,0,0] --no-use_cache_file_name_prefix --model_name LMFDB_uniform_Matthews_Nsum_0_p10000_B  --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_uniform_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 --N_masks [1,0,0,0,0,0,0] --no-use_cache_file_name_prefix --model_name LMFDB_uniform_Matthews_Nsum_0_p100000_B --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_uniform_Matthews_Nsum_4_p100000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 --N_masks [1,0,0,0,0,0,0] --no-use_cache_file_name_prefix   --model_name LMFDB_range_Matthews_Nsum_0_p1000_B     --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_range_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 --N_masks [1,0,0,0,0,0,0] --no-use_cache_file_name_prefix   --model_name LMFDB_range_Matthews_Nsum_0_p10000_B    --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_range_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 --N_masks [1,0,0,0,0,0,0] --no-use_cache_file_name_prefix   --model_name LMFDB_range_Matthews_Nsum_0_p100000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_range_Matthews_Nsum_4_p100000 20 180
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 --N_masks [0,1,0,0,0,0,0] --no-use_cache_file_name_prefix --model_name LMFDB_uniform_Matthews_Nsum_1_p1000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_uniform_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 --N_masks [0,1,0,0,0,0,0] --no-use_cache_file_name_prefix --model_name LMFDB_uniform_Matthews_Nsum_1_p10000_B  --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_uniform_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 --N_masks [0,1,0,0,0,0,0] --no-use_cache_file_name_prefix --model_name LMFDB_uniform_Matthews_Nsum_1_p100000_B --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_uniform_Matthews_Nsum_4_p100000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 --N_masks [0,1,0,0,0,0,0] --no-use_cache_file_name_prefix   --model_name LMFDB_range_Matthews_Nsum_1_p1000_B     --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_range_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 --N_masks [0,1,0,0,0,0,0] --no-use_cache_file_name_prefix   --model_name LMFDB_range_Matthews_Nsum_1_p10000_B    --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_range_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 --N_masks [0,1,0,0,0,0,0] --no-use_cache_file_name_prefix   --model_name LMFDB_range_Matthews_Nsum_1_p100000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_range_Matthews_Nsum_4_p100000 20 180
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 --N_masks [0,0,1,0,0,0,0] --no-use_cache_file_name_prefix --model_name LMFDB_uniform_Matthews_Nsum_2_p1000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_uniform_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 --N_masks [0,0,1,0,0,0,0] --no-use_cache_file_name_prefix --model_name LMFDB_uniform_Matthews_Nsum_2_p10000_B  --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_uniform_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 --N_masks [0,0,1,0,0,0,0] --no-use_cache_file_name_prefix --model_name LMFDB_uniform_Matthews_Nsum_2_p100000_B --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_uniform_Matthews_Nsum_4_p100000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 --N_masks [0,0,1,0,0,0,0] --no-use_cache_file_name_prefix   --model_name LMFDB_range_Matthews_Nsum_2_p1000_B     --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_range_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 --N_masks [0,0,1,0,0,0,0] --no-use_cache_file_name_prefix   --model_name LMFDB_range_Matthews_Nsum_2_p10000_B    --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_range_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 --N_masks [0,0,1,0,0,0,0] --no-use_cache_file_name_prefix   --model_name LMFDB_range_Matthews_Nsum_2_p100000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_range_Matthews_Nsum_4_p100000 20 180
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 --N_masks [0,0,0,1,0,0,0] --no-use_cache_file_name_prefix --model_name LMFDB_uniform_Matthews_Nsum_3_p1000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_uniform_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 --N_masks [0,0,0,1,0,0,0] --no-use_cache_file_name_prefix --model_name LMFDB_uniform_Matthews_Nsum_3_p10000_B  --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_uniform_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 --N_masks [0,0,0,1,0,0,0] --no-use_cache_file_name_prefix --model_name LMFDB_uniform_Matthews_Nsum_3_p100000_B --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_uniform_Matthews_Nsum_4_p100000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 --N_masks [0,0,0,1,0,0,0] --no-use_cache_file_name_prefix   --model_name LMFDB_range_Matthews_Nsum_3_p1000_B     --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_range_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 --N_masks [0,0,0,1,0,0,0] --no-use_cache_file_name_prefix   --model_name LMFDB_range_Matthews_Nsum_3_p10000_B    --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_range_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 --N_masks [0,0,0,1,0,0,0] --no-use_cache_file_name_prefix   --model_name LMFDB_range_Matthews_Nsum_3_p100000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_range_Matthews_Nsum_4_p100000 20 180
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 --N_masks [0,0,0,0,1,0,0] --no-use_cache_file_name_prefix --model_name LMFDB_uniform_Matthews_Nsum_4_p1000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_uniform_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 --N_masks [0,0,0,0,1,0,0] --no-use_cache_file_name_prefix --model_name LMFDB_uniform_Matthews_Nsum_4_p10000_B  --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_uniform_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 --N_masks [0,0,0,0,1,0,0] --no-use_cache_file_name_prefix --model_name LMFDB_uniform_Matthews_Nsum_4_p100000_B --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_uniform_Matthews_Nsum_4_p100000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 --N_masks [0,0,0,0,1,0,0] --no-use_cache_file_name_prefix   --model_name LMFDB_range_Matthews_Nsum_4_p1000_B     --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_range_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 --N_masks [0,0,0,0,1,0,0] --no-use_cache_file_name_prefix   --model_name LMFDB_range_Matthews_Nsum_4_p10000_B    --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_range_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 --N_masks [0,0,0,0,1,0,0] --no-use_cache_file_name_prefix   --model_name LMFDB_range_Matthews_Nsum_4_p100000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_range_Matthews_Nsum_4_p100000 20 180
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 --N_masks [0,0,0,0,0,1,0] --no-use_cache_file_name_prefix --model_name LMFDB_uniform_Matthews_Nsum_5_p1000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_uniform_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 --N_masks [0,0,0,0,0,1,0] --no-use_cache_file_name_prefix --model_name LMFDB_uniform_Matthews_Nsum_5_p10000_B  --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_uniform_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 --N_masks [0,0,0,0,0,1,0] --no-use_cache_file_name_prefix --model_name LMFDB_uniform_Matthews_Nsum_5_p100000_B --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_uniform_Matthews_Nsum_4_p100000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 --N_masks [0,0,0,0,0,1,0] --no-use_cache_file_name_prefix   --model_name LMFDB_range_Matthews_Nsum_5_p1000_B     --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_range_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 --N_masks [0,0,0,0,0,1,0] --no-use_cache_file_name_prefix   --model_name LMFDB_range_Matthews_Nsum_5_p10000_B    --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_range_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 --N_masks [0,0,0,0,0,1,0] --no-use_cache_file_name_prefix   --model_name LMFDB_range_Matthews_Nsum_5_p100000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_range_Matthews_Nsum_4_p100000 20 180
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 --N_masks [0,0,0,0,0,0,1] --no-use_cache_file_name_prefix --model_name LMFDB_uniform_Matthews_Nsum_B_p1000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_uniform_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 --N_masks [0,0,0,0,0,0,1] --no-use_cache_file_name_prefix --model_name LMFDB_uniform_Matthews_Nsum_B_p10000_B  --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_uniform_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 --N_masks [0,0,0,0,0,0,1] --no-use_cache_file_name_prefix --model_name LMFDB_uniform_Matthews_Nsum_B_p100000_B --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_uniform_Matthews_Nsum_4_p100000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 --N_masks [0,0,0,0,0,0,1] --no-use_cache_file_name_prefix   --model_name LMFDB_range_Matthews_Nsum_B_p1000_B     --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_range_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 --N_masks [0,0,0,0,0,0,1] --no-use_cache_file_name_prefix   --model_name LMFDB_range_Matthews_Nsum_B_p10000_B    --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_range_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 --N_masks [0,0,0,0,0,0,1] --no-use_cache_file_name_prefix   --model_name LMFDB_range_Matthews_Nsum_B_p100000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_range_Matthews_Nsum_4_p100000 20 180
+
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 0 --N_masks [1,1,1,1,1,1,1] --no-use_cache_file_name_prefix --model_name LMFDB_uniform_Matthews_Nsum_ALL_p1000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_uniform_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 1 --N_masks [1,1,1,1,1,1,1] --no-use_cache_file_name_prefix --model_name LMFDB_uniform_Matthews_Nsum_ALL_p10000_B  --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_uniform_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 2 --N_masks [1,1,1,1,1,1,1] --no-use_cache_file_name_prefix --model_name LMFDB_uniform_Matthews_Nsum_ALL_p100000_B --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_uniform_Matthews_Nsum_4_p100000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 3 --N_masks [1,1,1,1,1,1,1] --no-use_cache_file_name_prefix   --model_name LMFDB_range_Matthews_Nsum_ALL_p1000_B     --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_range_Matthews_Nsum_4_p1000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 4 --N_masks [1,1,1,1,1,1,1] --no-use_cache_file_name_prefix   --model_name LMFDB_range_Matthews_Nsum_ALL_p10000_B    --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_range_Matthews_Nsum_4_p10000 20 180
+
+./train_model_controller_gyopt.py --no-lr_finder_usage --cuda_device_no 5 --N_masks [1,1,1,1,1,1,1] --no-use_cache_file_name_prefix   --model_name LMFDB_range_Matthews_Nsum_ALL_p100000_B   --gyopt_metric hyp_Matthews_corrcoef_binary_metric   hyp_LMFDB_range_Matthews_Nsum_4_p100000 20 180

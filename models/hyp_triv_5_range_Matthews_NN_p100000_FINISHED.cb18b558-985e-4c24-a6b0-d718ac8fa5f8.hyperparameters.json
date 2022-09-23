@@ -1,0 +1,85 @@
+{
+  "model_name": "hyp_triv_5_range_Matthews_NN_p100000_FINISHED",
+  "model_num": "cb18b558-985e-4c24-a6b0-d718ac8fa5f8",
+  "model_type": "SimpleConvolutionalClassificationModel",
+  "model": {
+    "dim": 64,
+    "input_layers": 0,
+    "reducing_layers": 14,
+    "output_layers": 3,
+    "reduction_exponent": 1.0,
+    "kernel_size": 17,
+    "stride": 2,
+    "encode_position": true,
+    "dropout": 0.0,
+    "nonlin_str": "ReLU_inplace",
+    "maxpool_layer": false,
+    "dropout_after_encoder": null,
+    "hidden_lin_ftrs": [],
+    "force_nonincreasing_lin_ftrs": false,
+    "MIN_LATENT_SIZE": 2
+  },
+  "dataloader": {
+    "data_files": [
+      "od_Matije/curves_svi",
+      "od_Matije/curves_r01triv"
+    ],
+    "dataset": "EllipticCurveDataset",
+    "load_reduced_metadata": false,
+    "max_prime": 100000,
+    "skip_first_primes": 0,
+    "valid_size": 0.2,
+    "test_size": null,
+    "min_max_conductor": [
+      1,
+      100000000000000000000000000000
+    ],
+    "min_max_test_conductor": [
+      100000000000000000000000000001,
+      1000000000000000000000000000000
+    ],
+    "curves_count": null,
+    "test_curves_count": null,
+    "purge_repetitive_curves": true,
+    "sort": "conductor",
+    "min_max_rank": null,
+    "only_prime_conductors": false,
+    "only_not_prime_conductors": false,
+    "class_identifier": "rank",
+    "min_class_size": 50,
+    "batch_size": 1024,
+    "test_batch_size": 1024,
+    "test_RAND_SEED": 42,
+    "valid_RAND_SEED": 42,
+    "shuffle_RAND_SEED": 42,
+    "normalize_aps": true,
+    "use_p": false,
+    "use_sqrt_p": false,
+    "use_log_p": false,
+    "use_conductors": true,
+    "load_save_cache": true,
+    "max_log10conductors": 29.999875633530895
+  },
+  "opt_func_str": "Adam",
+  "loss_func_str": "CrossEntropyLoss_weighted",
+  "epochs": 40,
+  "optimizer": {
+    "lr_max": 0.00035,
+    "wd": 0.001
+  },
+  "iter_num": 6,
+  "loss_func_weights": [
+    26.406556312885428,
+    17.024189160912325,
+    11.423689117541338,
+    4.717808060307336,
+    3.7887379038642437,
+    5.126578768944597,
+    10.035895968302997,
+    27.95175010650432,
+    119.82120765832106,
+    950.007006071929,
+    14323.697183098591
+  ],
+  "fp16_training": true
+}
